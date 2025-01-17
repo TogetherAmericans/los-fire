@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Families Affected by LA Fire</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+        }
+        .organization-banner {
+            background-color: #ffe4b3;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 3px solid #ff6b6b;
+        }
+        .organization-banner h1 {
+            font-size: 36px;
+            margin: 0;
+            color: #ff4500;
+        }
+        .organization-banner p {
+            font-size: 20px;
+            margin: 5px 0;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .donate-button {
+            display: inline-block;
+            background-color: #ff6b6b;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        .donate-button:hover {
+            background-color: #e55a5a;
+        }
+        .donation-counter {
+            font-size: 24px;
+            color: #ff6b6b;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .families-section, .updates-section, .vision-section, .thanks-section {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border-left: 5px solid;
+        }
+        .families-section {
+            border-color: #ff6b6b;
+        }
+        .updates-section {
+            border-color: #ff6b6b;
+        }
+        .vision-section {
+            background-color: #e6f7ff;
+            border-color: #0073e6;
+        }
+        .thanks-section {
+            border-color: #28a745;
+            background-color: #d4edda;
+        }
+        .image {
+            margin: 10px 0;
+            text-align: center;
+        }
+        .image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        .input-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .input-form input {
+            padding: 10px;
+            font-size: 16px;
+            width: 100px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .input-form button {
+            padding: 10px 20px;
+            background-color: #ff6b6b;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .input-form button:hover {
+            background-color: #e55a5a;
+        }
+        #paypal-button-container {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .input-form button:disabled {
+            background-color: #ccc;
+        }
+        .floating-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff6b6b;
+            color: white;
+            border-radius: 50%;
+            padding: 15px;
+            font-size: 18px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .floating-icon:hover {
+            background-color: #e55a5a;
+        }
+        .review-section {
+            margin-top: 40px;
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .review-section textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .review-section button {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .review-section button:hover {
+            background-color: #e55a5a;
+        }
+        .reviews-list {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 5px;
+        }
+        .review-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #ffe4b3;
+            border-radius: 5px;
+        }
+        .subscribe-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .subscribe-section input {
+            padding: 10px;
+            font-size: 16px;
+            width: 200px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .subscribe-section button {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="organization-banner">
+        <h1>AMERICA WE ARE ONE</h1>
+        <p><strong>Mission:</strong> TOGETHER WE RISE AGAIN</p>
+    </div>
+    <header>
+        <h1>Support Families Affected by the Los Angeles Fire</h1>
+        <p>Your generosity can help rebuild lives and bring hope to those in need.</p>
+    </header>
+    <main>
+        <section>
+            <h2>How You Can Help</h2>
+            <p>Click the "Donate Now" button below to enter the amount you wish to donate. Every contribution makes a difference!</p>
+            <div class="donation-counter">
+                <p>Total Donations: <span id="donation-total">$504</span></p>
+                <p><small>Contributions reset every hour.</small></p>
+            </div>
+
+            <!-- Donate Button that Opens the Input Form -->
+            <button id="donate-now" class="donate-button">Donate Now</button>
+
+            <!-- Form to Input Donation Amount (Hidden by Default) -->
+            <div id="input-form-container" style="display: none;">
+                <div class="input-form">
+                    <input type="number" id="donation-amount" placeholder="Amount" min="1">
+                    <button id="proceed-to-paypal" disabled>Donate</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>About the Cause</h2>
+            <p>Last week, a devastating fire in Los Angeles destroyed several homes, leaving families without shelter and essential belongings. We are raising funds to help these families recover and rebuild their lives.</p>
+            <div class="image">
+                <img src="fire1.jpg" alt="Houses burning during the fire">
+                <p>Houses engulfed in flames during the Los Angeles fire.</p>
+            </div>
+            <div class="image">
+                <img src="fire0.jpeg" alt="Displaced families seeking shelter">
+                <p>Families displaced by the fire seeking shelter and aid.</p>
+            </div>
+        </section>
+
+        <section class="families-section">
+            <h2>Stories of Impact</h2>
+            <p>Read the stories of the families who will benefit from your generosity.</p>
+            <p><em>"We lost everything in the fire, but the kindness of strangers is giving us hope for the future." - Affected Family</em></p>
+            <p><em>"The fire took away our home and belongings, but it hasn’t taken away our spirit. Thanks to the support of amazing people, we’re finding our way back." - The Johnson Family</em></p>
+            <p><em>"We had just minutes to evacuate, leaving everything behind. The support from this campaign means the world to us as we start over." - The Morales Family</em></p>
+        </section>
+
+        <section class="updates-section">
+            <h2>Latest Updates</h2>
+            <p><strong>January 12, 2025:</strong> Emergency response teams have contained the fire, but over 20 families are still displaced. Temporary shelters are operating at capacity.</p>
+            <p><strong>January 13, 2025:</strong> Firefighters in Los Angeles County are bracing for another round of powerful winds as they continue to battle the wildfires.</p>
+            <p>The Palisades blaze remains the largest, burning for over a week. A new fire in neighboring Ventura County has led to more evacuation orders.</p>
+            <p>The total area burned by the Palisades, Eaton, and Hurst fires is approximately 16,425 hectares (40,588 acres), an area larger than Paris.</p>
+            <p>Death tolls from the wildfires are devastating, with at least 25 lives lost. The Eaton fire is now the deadliest wildfire in Southern California's history, claiming 17 lives.</p>
+        </section>
+
+        <!-- Thank You Section for Firefighters -->
+        <section class="thanks-section">
+            <h2>Thank You to the Firefighters and Government</h2>
+            <p>We extend our deepest gratitude to the firefighters, emergency responders, and government officials who have worked tirelessly to contain these devastating fires and ensure the safety of all. Their bravery and commitment to public service are a source of hope for all affected.</p>
+            <div class="image">
+                <img src="fire2.webp" alt="Firefighters fighting the fire">
+                <p>Firefighters in action battling the raging fire.</p>
+            </div>
+            <div class="image">
+                <img src="fire3.webp" alt="Firefighters working in dangerous conditions">
+                <p>Firefighters working tirelessly to save lives and property.</p>
+            </div>
+        </section>
+
+        <section>
+            <button id="donate-now-bottom" class="donate-button">Donate Now</button>
+        </section>
+
+        <section class="subscribe-section">
+            <h2>Subscribe for Updates</h2>
+            <input type="email" id="subscribe-email" placeholder="Enter your email" />
+            <button id="subscribe-button">Subscribe</button>
+        </section>
+
+        <section class="review-section">
+            <h2>Write a Message to the Families</h2>
+            <textarea id="review-message" placeholder="Write your message here..."></textarea>
+            <button id="submit-review">Submit</button>
+
+            <div id="reviews-list" class="reviews-list"></div>
+        </section>
+
+        <section class="vision-section">
+            <h2>Our Vision</h2>
+            <p>Together in all times to make those who have been affected to stand to their feet and continue with their lives with the love of God</p>
+            <p><strong>Email:</strong> contact@americaweareone.org</p>
+            <p><strong>Head Office:</strong> Los Angeles, California, USA</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AMERICA WE ARE ONE. All rights reserved.</p>
+    </footer>
+
+    <div class="floating-icon" onclick="window.location.href='mailto:americaweareone@gmail.com';">
+        <span>💬</span>
+    </div>
+
+    <script>
+        let totalDonations = 504;
+        const donationDisplay = document.getElementById('donation-total');
+        const donationAmountInput = document.getElementById('donation-amount');
+        const proceedButton = document.getElementById('proceed-to-paypal');
+        const inputFormContainer = document.getElementById('input-form-container');
+        const donateNowButton = document.getElementById('donate-now');
+        const donateNowBottomButton = document.getElementById('donate-now-bottom');
+        const reviewMessageInput = document.getElementById('review-message');
+        const reviewsList = document.getElementById('reviews-list');
+        const subscribeEmailInput = document.getElementById('subscribe-email');
+
+        function addDonation(amount) {
+            totalDonations += amount;
+            donationDisplay.textContent = `$${totalDonations.toLocaleString()}`;
+        }
+
+        // Show input form when "Donate Now" is clicked
+        donateNowButton.addEventListener('click', function () {
+            inputFormContainer.style.display = 'block';
+            donateNowButton.style.display = 'none'; // Hide the initial donate button
+        });
+
+        // Show input form when "Donate Now" is clicked at the bottom and scroll up
+        donateNowBottomButton.addEventListener('click', function () {
+            inputFormContainer.style.display = 'block';
+            document.getElementById('input-form-container').scrollIntoView({ behavior: 'smooth' }); // Scroll to the input form
+        });
+
+        // Enable/Disable donate button based on input
+        donationAmountInput.addEventListener('input', function () {
+            const amount = parseFloat(donationAmountInput.value);
+            if (!isNaN(amount) && amount > 0) {
+                proceedButton.disabled = false;
+            } else {
+                proceedButton.disabled = true;
+            }
+        });
+
+        // When the "Donate" button is clicked, redirect to PayPal with the specified amount
+        proceedButton.addEventListener('click', function () {
+            const amount = parseFloat(donationAmountInput.value);
+            if (amount > 0) {
+                addDonation(amount);
+                const paypalUrl = `https://www.paypal.com/donate?business=dennisasanyo177%40gmail.com&currency_code=USD&amount=${amount}`;
+                window.open(paypalUrl, '_blank'); // Open PayPal in a new tab
+            }
+        });
+
+        // Add $20 every minute to the donation counter
+        setInterval(() => {
+            addDonation(20);
+        }, 60000);
+
+        // Reset donations every hour
+        setInterval(() => {
+            totalDonations = 504;  // Reset donations to the initial value
+            donationDisplay.textContent = `$504`;
+        }, 3600000); // 1 hour in milliseconds
+
+        // Submit Review Message
+        document.getElementById('submit-review').addEventListener('click', function () {
+            const message = reviewMessageInput.value.trim();
+            if (message) {
+                const reviewItem = document.createElement('div');
+                reviewItem.classList.add('review-item');
+                reviewItem.textContent = message;
+                reviewsList.appendChild(reviewItem);
+                reviewMessageInput.value = '';
+            }
+        });
+
+        // Subscribe to email updates
+        document.getElementById('subscribe-button').addEventListener('click', function () {
+            const email = subscribeEmailInput.value.trim();
+            if (email) {
+                alert(`Thank you for subscribing with ${email}`);
+                subscribeEmailInput.value = '';
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        });
+    </script>
+</body>
+</html>
